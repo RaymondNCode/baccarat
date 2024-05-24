@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .betting-text {
+        margin-bottom: 25px;
+      }
+
+      .player-banker-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .player-banker-row button {
+        margin: auto 5px;
+      }
+      .other-betting-row {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Baccarat Game</h1>
+    <div>Player</div>
+    <div class="js-player-card"></div>
+    <div class="js-player-3rd-card"></div>
+    <div>Banker</div>
+    <div class="js-banker-card"></div>
+    <div class="js-banker-3rd-card"></div>
+    <div class="betting-text">Betting</div>
+    <div class="player-banker-row">
+      <span >Player 闲: <span class="js-player-bet"></span></span>
+      <button class="js-add-player-button">+100</button>
+      <button class="js-minus-player-button">-100</button>
+      <span>Banker 庄: <span class="js-banker-bet"></span></span>
+      <button class="js-add-banker-button">+100</button>
+      <button class="js-minus-banker-button">-100</button>
+    </div>
+    <div class="other-betting-row">
+      <div class="column">
+        <div>Player Pair 闲对子: <span class="js-playerpair-bet"></span></div>
+        <div>
+          <button class="js-add-playerpair-button">+10</button>
+          <button class="js-minus-playerpair-button">-10</button>
+        </div>
+
+      </div>
+      <div class="column">
+        <div>Tie 合: <span class="js-tie-bet"></span></div>
+        <div>
+          <button class="js-add-tie-button">+10</button>
+          <button class="js-minus-tie-button">-10</button>
+        </div>
+      </div>
+      <div class="column">
+        <div>Banker Wins On Six 庄赢六点: <span class="js-bankeronsix-bet"></span></div>
+        <div>
+          <button class="js-add-bankeronsix-button">+10</button>
+          <button class="js-minus-bankeronsix-button">-10</button>
+        </div>
+      </div>
+      <div class="column">
+        <div>Banker Pair 庄对子: <span class="js-bankerpair-bet"></span></div>
+        <div>
+          <button class="js-add-bankerpair-button">+10</button>
+          <button class="js-minus-bankerpair-button">-10</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div>Your Chip: <span class="js-user-cash"></span></div>
+    <button class="js-gen-card-shuffle">Start the game</button>
+    <button class="js-next-round">Next Round</button>
+    <div class="js-result"></div>
+
+    <script src="betting.js">
+    </script>
+    <script src="display.js">
+    </script>
+    <script src="test_game.js">
+    </script>
+  </body>
+</html>

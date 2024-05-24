@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let cards = ['1', '2', '3', '4', '5', 
+                    '6', '7', '8', '9', '10', 
+                    'J', 'Q', 'K'
+                  ];
+      let values = [1,2,3,4,5,6,7,8,9,0,0,0,0];
+      let suits = ['spades', 'clubs', 'hearts', 'diamonds'];
+      let decks = cards.map(function (x, i) {
+        return { card: x, value: values[i]}
+      });
+      //console.log(decks);
+      let fullDecks = [];
+      
+      for (let i = 0; i < suits.length; i) {
+        for (let e = 0; e < decks.length; e ++) {
+          fullDecks.push({card: decks[e].card, value: decks[e].value, suit: suits[i]});
+        }
+        i++
+      };
+
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var temp = array[i];
+              array[i] = array[j];
+              array[j] = temp;
+          }
+      }
+      
+      shuffleArray(fullDecks);
+      console.log(fullDecks);
+
+      let SFullDecks = fullDecks;
+      console.log(SFullDecks);
+
+      console.log(fullDecks);
+
+
+
+
+
+      /*
+      let decks = cards.map(function (x, i) {
+        return { card: x, value: value[i]}
+      });
+      console.log(decks);
+      let fullDecks = [];
+      
+      let suits = ['spades', 'clubs', 'hearts', 'diamonds'];
+      for (let i = 0; i < decks.length; i) {
+        for (let e = 0; e < suits.length; e++) {
+          fullDecks.push({decks: decks[i], suit: suits[e]});
+          
+        }
+        i++;
+      };
+      console.log(fullDecks);
+      */
+
+      /*
+      let decks = [];
+      for (let i = 0; i < cards.length; i) {
+        for (let e = 0; e < suits.length; e ++) {
+          decks.push({card: cards[i], suit: suits[e]});
+        }
+        i++;
+      };
+      console.log(decks);
+      */
+
+      
+      /*
+      var armixed = ar1.map(function(x, i) {
+        return { categories: x, catid: ar2[i] }
+      });
+
+      console.log(armixed);
+      */
+    </script>
+  </body>
+</html>
